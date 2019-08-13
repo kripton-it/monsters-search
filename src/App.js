@@ -1,6 +1,8 @@
 import "./App.css";
 import React, { Component } from "react";
 
+import { CardList } from "./components/card-list/CardList";
+
 const monsters = [];
 const url = "https://jsonplaceholder.typicode.com/users";
 
@@ -20,11 +22,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        {this.state.monsters.map(({ name }) => (
-          <h1 key={name}>{name}</h1>
+      <CardList>
+        {this.state.monsters.map(monster => (
+          <p>{monster.name}</p>
         ))}
-      </div>
+      </CardList>
     );
   }
 }
