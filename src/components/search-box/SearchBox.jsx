@@ -7,7 +7,6 @@ export const SearchBox = ({ handleChange, searchField, placeholder = "search" })
       className="search"
       placeholder={placeholder}
       type="search"
-      // value={searchField}
       onChange={handleChange}
     />
   );
